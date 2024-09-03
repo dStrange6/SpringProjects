@@ -2,7 +2,7 @@ package com.mayank.dao;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository("dao")
 public class DAO
 {
     public DAO()

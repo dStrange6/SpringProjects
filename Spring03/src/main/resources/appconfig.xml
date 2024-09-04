@@ -12,6 +12,7 @@
  which means you have to inject the values in the parameterized constructor
  <bean class="com.mayank.Employee"/>-->
 
+    <!--by default order should be same as constructor arguments-->
     <bean id="emp1" class="com.mayank.Employee">
         <constructor-arg value="21"/>
         <constructor-arg value="2321231.21"/>
@@ -19,11 +20,19 @@
         <constructor-arg value="Developer"/>
     </bean>
 
+    <!--if order is not same then you can specify the index or name of argument-->
     <bean id="emp2" class="com.mayank.Employee">
-        <constructor-arg value="34"/>
-        <constructor-arg value="1021231.21"/>
-        <constructor-arg value="david"/>
-        <constructor-arg value="Tester"/>
+        <constructor-arg index="3" value="Tester"/>
+        <constructor-arg index="1" value="1021231.21"/>
+        <constructor-arg index="2" value="david"/>
+        <constructor-arg index="0" value="34"/>
+    </bean>
+
+    <bean id="emp3" class="com.mayank.Employee">
+        <constructor-arg name="age" value="21"/>
+        <constructor-arg name="salary" value="2321231.21"/>
+        <constructor-arg name="name" value="mayank"/>
+        <constructor-arg name="post" value="Developer"/>
     </bean>
 
 </beans>

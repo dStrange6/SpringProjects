@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--
+ if you define the bean like this, it will give an error if no default constructor is present,
+ which means you have to inject the values in the parameterized constructor
+ <bean class="com.mayank.Employee"/>-->
+
+    <!--by default order should be same as constructor arguments-->
+    <bean id="emp4" class="com.mayank.Employee">
+        <constructor-arg value="25"/>
+        <constructor-arg value="50000"/>
+        <constructor-arg value="Tanmay"/>
+        <constructor-arg value="Analyst"/>
+    </bean>
+
+
+<!--    &lt;!&ndash;if order is not same then you can specify the index or name of argument&ndash;&gt;-->
+<!--    <bean id="emp2" class="com.mayank.Employee">-->
+<!--        <constructor-arg index="3" value="Tester"/>-->
+<!--        <constructor-arg index="1" value="1021231.21"/>-->
+<!--        <constructor-arg index="2" value="david"/>-->
+<!--        <constructor-arg index="0" value="34"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="emp3" class="com.mayank.Employee">-->
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="salary" value="2321231.21"/>-->
+<!--        <constructor-arg name="name" value="mayank"/>-->
+<!--        <constructor-arg name="post" value="Developer"/>-->
+<!--    </bean>-->
+
+</beans>

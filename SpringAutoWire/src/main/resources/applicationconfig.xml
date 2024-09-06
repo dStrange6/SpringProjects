@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+<!--        <bean id="dhl" class="com.mayank.services.DHL"/>-->
+<!--        <bean id="fedex" class="com.mayank.services.FedEx"/>-->
+
+<!--        <bean id="amz" class="com.mayank.Amazon" autowire="byType"/>-->
+
+<!--            <bean id="dhl" class="com.mayank.services.DHL"/>-->
+<!--            <bean id="deliveryService" class="com.mayank.services.FedEx"/>-->
+
+<!--            <bean id="amz" class="com.mayank.Amazon" autowire="byName" />-->
+
+<!--    <bean id="dhl" class="com.mayank.services.DHL" autowire-candidate="false"/>-->
+<!--   <bean id="fedex" class="com.mayank.services.FedEx" primary="true"/>-->
+
+<!--    <bean id="amz" class="com.mayank.Amazon" autowire="constructor" />-->
+
+<!--    <bean id="dhl" class="com.mayank.services.DHL"/>-->
+<!--    <bean id="fedex" class="com.mayank.services.FedEx" primary="true"/>-->
+
+<!--    <bean id="amz" class="com.mayank.Amazon" autowire="constructor">-->
+<!--        <constructor-arg ref="dhl" name="deliveryService"/>       -->
+<!--    </bean>-->
+    <!--explicit wiring is always override autowiring as shown above-->
+
+
+<!--        <bean id="dhl" class="com.mayank.services.DHL"/>-->
+<!--        <bean id="fedex" class="com.mayank.services.FedEx" primary="true"/>-->
+
+<!--        <bean id="amz" class="com.mayank.Amazon" autowire="no">-->
+<!--            <constructor-arg ref="dhl" name="deliveryService"/>-->
+<!--        </bean>-->
+
+
+        <bean id="dhl" class="com.mayank.services.DHL"/>
+        <bean id="fedex" class="com.mayank.services.FedEx"/>
+        <bean id="demo" class="com.mayank.Demo"/>
+
+        <bean id="amz" class="com.mayank.Amazon" autowire="constructor"/>
+<!--
+
+if one qualifying bean present  -> inject that bean
+if more than one qualifying bean present -> call default constructor, but does not throw any error
+-> in above case if no default constructor is present then spring will throw error
+by default spring prefers constructor with larger no of args if all qualifying beans are present
+
+
+
+-->
+
+</beans>

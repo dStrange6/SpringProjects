@@ -10,7 +10,9 @@ public class Main {
     public static void main(String[] args) {
 
         //eager loading
-        ApplicationContext container = new ClassPathXmlApplicationContext("appconfig.xml");
+//        ApplicationContext container = new ClassPathXmlApplicationContext("appconfig.xml");
+
+        ApplicationContext container = new ClassPathXmlApplicationContext("appconfig.xml","appconfig1.xml");
 
 //        Employee emp = container.getBean(Employee.class);
 //        String result = emp.toString();
@@ -24,5 +26,11 @@ public class Main {
         System.out.println(res);
         res = emp2.toString();
         System.out.println(res);
+
+
+        /////////////////////////////////
+
+        Employee emp4 = (Employee) container.getBean("emp4");
+        System.out.println(emp4);
     }
 }

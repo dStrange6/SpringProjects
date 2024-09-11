@@ -1,6 +1,7 @@
 package com.mayank;
 
 import com.mayank.services.DeliveryService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Amazon
 {
@@ -9,8 +10,20 @@ public class Amazon
         System.out.println("Amazon class loaded");
     }
 
+    public void setStr(String str) {
+        System.out.println("Bean created for str");
+        this.str = str;
+    }
+
     public DeliveryService deliveryService;
     public Demo demo;
+    public String str;
+
+    public void setDemo(Demo demo) {
+        System.out.println("Set Demo called");
+
+        this.demo = demo;
+    }
 
     public Amazon()
     {
@@ -30,6 +43,8 @@ public class Amazon
     }
 
     public void setDeliveryService(DeliveryService deliveryService) {
+        System.out.println("Set DeliveryService called");
+
         this.deliveryService = deliveryService;
     }
 

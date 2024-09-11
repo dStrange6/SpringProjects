@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--   <bean class="com.mayank.services.DHL"/>-->
+<!--    <bean class="com.mayank.services.FedEx"/>-->
+<!--    <bean class="com.mayank.Demo"/>-->
+
+<!--    <bean class="com.mayank.Amazon" autowire="byType"/>-->
+
+<!--       <bean class="com.mayank.services.DHL" primary="true"/>-->
+<!--        <bean class="com.mayank.services.FedEx"/>-->
+<!--        <bean id="demo" class="com.mayank.Demo"/>-->
+
+    <bean id="str" class="java.lang.String">
+        <constructor-arg value="Mayank"/>
+    </bean>
+
+        <bean class="com.mayank.Amazon" autowire="byName"/>
+<!--            <property name="str" ref="str"/>-->
+<!--        </bean>-->
+
+
+
+
+
+</beans>

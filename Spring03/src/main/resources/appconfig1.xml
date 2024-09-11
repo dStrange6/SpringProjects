@@ -21,7 +21,7 @@
     </bean>
 
 
-<!--    &lt;!&ndash;if order is not same then you can specify the index or name of argument&ndash;&gt;-->
+    <!--if order is not same then you can specify the index or name of argument-->
 <!--    <bean id="emp2" class="com.mayank.Employee">-->
 <!--        <constructor-arg index="3" value="Tester"/>-->
 <!--        <constructor-arg index="1" value="1021231.21"/>-->

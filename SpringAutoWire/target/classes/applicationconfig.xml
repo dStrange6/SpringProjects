@@ -40,15 +40,18 @@
 
         <bean id="dhl" class="com.mayank.services.DHL"/>
         <bean id="fedex" class="com.mayank.services.FedEx"/>
-        <bean id="demo" class="com.mayank.Demo"/>
+        <bean  class="com.mayank.Demo"/>
 
-        <bean id="amz" class="com.mayank.Amazon" autowire="constructor"/>
+        <bean class="com.mayank.Amazon" autowire="constructor"/>
 <!--
 
 if one qualifying bean present  -> inject that bean
 if more than one qualifying bean present -> call default constructor, but does not throw any error
-by default prefers constructor with larger no of args if all qualifying beans are present
+-> in above case if no default constructor is present then spring will throw error
+by default spring prefers constructor with larger no of args if all qualifying beans are present
 
 -->
+
+
 
 </beans>
